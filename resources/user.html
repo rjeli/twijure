@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+	<p>user: {{username}}</p>
+	<form action="/action" method="POST">
+		<input type="hidden" name="id" value="{{id}}">
+		{% if following %}
+		<input type="hidden" name="action" value="unfollow">
+		<input type="submit" value="unfollow">
+		{% else %}
+		<input type="hidden" name="action" value="follow">
+		<input type="submit" value="follow">
+		{% endif %}
+	</form>
+	{% for post in posts %}
+	<p>
+	<a href="/post/{{post.id}}">{{post.body}}</a>
+	</p>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Twijure</title>
+</head>
+
+<body>
+	<form action="/action" method="POST">
+		<a href="/">home</a>
+		<a href="/user/{{username}}">{{username}}</a>
+		<input type="hidden" name="action" value="logout">
+		<input type="submit" value="log out">
+	</form>
+	<hr>
+	{% block content %}
+	this is the base template.
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/action" method="POST">
+	<input type="hidden" name="action" value="newpost">
+	<p>post: <input type="text" name="post-body"></p>
+	<p><input type="submit" value="send!"></p>
+</form>
+{% endblock %}

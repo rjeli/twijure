@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	<a href="/post">make a post</a>
+	{% for post in posts %}
+	<p>
+	<a href="/user/{{post.author}}"><b>{{post.author}}</b></a>
+	<a href="/post/{{post.id}}">{{post.body}}</a>
+	</p>
+	{% endfor %}
+{% endblock %}
