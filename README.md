@@ -6,13 +6,10 @@ A Twitter clone implemented in Clojure and Redis.
 
 You need Leiningen to run the server, and Redis to run the database.
 
-> git clone git@github.com:eliriggs/twijure.git
-
-> cd microblog
-
-> lein deps
-
-> lein ring server-headless
+    git clone git@github.com:eliriggs/twijure.git
+    cd microblog
+    lein deps
+    lein ring server-headless
 
 Make sure the Redis database is running, then connect to http://localhost:3000
 
